@@ -19,10 +19,12 @@ const Countdown: FC<Props> = ({ data = defaultData }) => {
 
   return (
     <div className="Countdown">
-      <h3 style={{ whiteSpace: "pre" }}>{data.eventName + " ↫ " 
-        + totalDiffInWeeks.toString().padStart(2, '0') + "W "
-        + restDiffInDays.toString().padStart(2, '0') + "D "
-        + restDiffInHours.toString().padStart(2, '0') + ":" + restDiffInMinutes.toString().padStart(2, '0') + ":" + restDiffInSecs.toString().padStart(2, '0')}</h3>
+      <h3 style={{ whiteSpace: "pre" }}>{data.eventName + " \n⤷ " 
+        + totalDiffInWeeks.toString().padStart(2, '0') + " Weeks "
+        + restDiffInDays.toString().padStart(2, '0') + " Days "
+        + restDiffInHours.toString().padStart(2, '0') + " Hours" // + ":" + restDiffInMinutes.toString().padStart(2, '0') + ":" + restDiffInSecs.toString().padStart(2, '0')
+        }
+      </h3>
     </div>
   );
 };
