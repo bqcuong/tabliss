@@ -6,11 +6,14 @@
 
 <p align="center"><a href="https://tabliss.io">https://tabliss.io</a></p>
 
+## Requirements
+- Node 20
+
 ## Usage
 
 Install dependencies with `npm install` before running the following scripts.
 
-- `npm run dev[:target]` Local development server
+- `npm run dev[:target]` Local development server, `:target` = `web`, `firefox`
 - `npm run build[:target]` Production build
 - `npm run translations` Manage translation files
 
