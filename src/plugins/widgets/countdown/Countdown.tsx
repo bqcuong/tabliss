@@ -27,7 +27,7 @@ const Countdown: FC<Props> = ({ data = defaultData }) => {
 
   return (
     <div className={ "Countdown" + (comingSoon ? " Soon" : "") + (passed ? " Passed" : "") }>
-      <h3 style={{ whiteSpace: "pre" }}>{data.eventName + " \n⤷ " 
+      <h3 style={{ whiteSpace: "pre" }}><a href={data.eventLink} target="_blank">{data.eventName}</a>{" \n⤷ " 
         + (passed ? "Passed! " : "")
         + totalDiffInWeeks.toString().padStart(2, '0') + " Weeks "
         + restDiffInDays.toString().padStart(2, '0') + " Days "

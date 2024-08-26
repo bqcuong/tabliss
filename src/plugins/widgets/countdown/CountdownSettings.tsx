@@ -18,7 +18,14 @@ const CountdownSettings: FC<Props> = ({ data = defaultData, setData }) => (
         <textarea
           rows={3}
           value={data.eventName}
-          onChange={(event) => setData({ time: data.time, eventName: event.target.value })}
+          onChange={(event) => setData({ time: data.time, eventName: event.target.value, eventLink: data.eventLink })}
+        />
+      </label>
+      <label>
+        Event Link
+        <input
+          value={data.eventLink}
+          onChange={(event) => setData({ time: data.time, eventName: data.eventName, eventLink: event.target.value })}
         />
       </label>
       <label>
@@ -26,7 +33,7 @@ const CountdownSettings: FC<Props> = ({ data = defaultData, setData }) => (
         <input 
           type="datetime-local"
           value={formatDateTime(data.time)}
-          onChange={(event) => setData({ time: parseDateTime(event.target.value), eventName: data.eventName })}
+          onChange={(event) => setData({ time: parseDateTime(event.target.value), eventName: data.eventName, eventLink: data.eventLink })}
         />
       </label>
     </div>
